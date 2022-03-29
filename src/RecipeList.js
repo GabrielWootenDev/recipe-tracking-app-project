@@ -2,10 +2,8 @@ import React from "react";
 import RecipeView from "./RecipeView";
 
 function RecipeList({ recipes , deleteRecipe } ) {
-  // TODO: Display the list of recipes using the structure of table that is provided.
-  // TODO: Create at least one additional component that is used by this component.
-  // TODO: Each recipe row must have a delete button - <button name="delete">Delete</button> - that deletes the post when clicked
-
+  
+  //This is our table structure, passing in the recipe view component with the .map method to create each row for ewach recipe
   return (
     <div className="recipe-list">
       <table>

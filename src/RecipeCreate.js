@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
 function RecipeCreate({ recipes, setRecipes }) {
-  // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
-  // TODO: Add the required input and textarea form elements.
-  // TODO: Add the required submit and change handlers
+  // initialFormState in our useState and createRecipe handler returns us back to a blank slate whenever the form is submitted.
   const initialFormState = {
     name: "",
     cuisine: "",
@@ -14,6 +12,7 @@ function RecipeCreate({ recipes, setRecipes }) {
 
   const [formData, setFormData] = useState({ ...initialFormState });
 
+  // the handleChange function updates our formData whenever data is changed in one of the form fields, with the target being the form that changed.
   const handleChange = ({ target }) => {
     const value = target.value;
     setFormData({
@@ -22,6 +21,7 @@ function RecipeCreate({ recipes, setRecipes }) {
     });
   };
 
+  // When the form is submitted createRecipe added the data in our formData as a new recipe in the recipes array by creating a new array with the information from both. Then setting our formData back to the initialFormState.
   const createRecipe = (event) => {
     event.preventDefault();
     setRecipes(() => [...recipes, formData]);
