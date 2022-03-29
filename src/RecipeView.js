@@ -1,7 +1,8 @@
 import React from "react";
 
-function RecipeView({ recipeData }, { deleteRecipe }) {
+function RecipeView( {recipeData, deleteRecipe, index}) {
   const { name, cuisine, photo, ingredients, preparation } = recipeData;
+
   return (
     <tr>
       <td>{name}</td>
@@ -12,9 +13,7 @@ function RecipeView({ recipeData }, { deleteRecipe }) {
       <td>{ingredients}</td>
       <td>{preparation}</td>
       <td>
-        <button name="edit" /*onClick={editRecipe}*/>Edit</button>
-        <br />
-        <button name="delete" onClick={deleteRecipe}>
+        <button name="delete" onClick={() => deleteRecipe(index)}>
           Delete
         </button>
       </td>
