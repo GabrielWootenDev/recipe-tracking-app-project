@@ -25,7 +25,7 @@ function RecipeCreate({ recipes, setRecipes }) {
   const createRecipe = (event) => {
     event.preventDefault();
     setRecipes(() => [...recipes, formData]);
-    console.log(recipes);
+    setFormData({...initialFormState});
   };
 
   return (
@@ -69,8 +69,30 @@ function RecipeCreate({ recipes, setRecipes }) {
                 placeholder="URL"
               />
             </td>
-            <td>4</td>
-            <td>5</td>
+            <td>
+              <label htmlFor="ingredients"></label>
+              <textarea
+                id="ingredients"
+                name="ingredients"
+                onChange={handleChange}
+                required={true}
+                rows={2}
+                value={formData.ingredients}
+                placeholder="Ingredients"
+              />
+            </td>
+            <td>
+              <label htmlFor="preparation"></label>
+              <textarea
+                id="preparation"
+                name="preparation"
+                onChange={handleChange}
+                required={true}
+                rows={2}
+                value={formData.preparation}
+                placeholder="Preparation"
+              />
+            </td>
             <td>
               <button type="submit">Create</button>
             </td>
