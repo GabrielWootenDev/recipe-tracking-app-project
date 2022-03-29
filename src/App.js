@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header><h1>Delicious Food Recipes</h1></header>
-      <RecipeList />
+      <RecipeList recipes={recipes}/>
       <RecipeCreate />
     </div>
   );
