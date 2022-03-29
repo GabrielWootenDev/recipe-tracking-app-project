@@ -33,7 +33,7 @@ function RecipeCreate({ recipes, setRecipes }) {
       <table>
         <tbody>
           <tr>
-            <td>
+            <td >
               <label htmlFor="name"></label>
               <input
                 id="name"

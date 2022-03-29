@@ -1,8 +1,7 @@
 import React from "react";
 import RecipeView from "./RecipeView";
 
-function RecipeList({ recipes , deleteRecipe } ) {
-  
+function RecipeList({ recipes, deleteRecipe }) {
   //This is our table structure, passing in the recipe view component with the .map method to create each row for ewach recipe
   return (
     <div className="recipe-list">

@@ -9,6 +9,16 @@ label {
   width: 100px;
 }
 
+/*added this to make the form look better at large sizes*/
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 50%
+}
+
+
 header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -18,6 +28,8 @@ h1 {
   font-size: 64px;
   text-align: center;
 }
+
+/* scales down all images to fit the table at 100% of the containers space */
 img {
   object-fit: scale-down;
   width: 100%;
@@ -65,14 +77,42 @@ table {
   text-overflow: ellipsis;
 }
 
+
+/* column size adjustments below to make ingredients and preperation 30% width and the rest of the columns 10% width */
 /* Column Size for thead */
 th:nth-child(4),
 th:nth-child(5) {
   width: 30%;
 }
 
-/* Column size for tbody */
+th:nth-child(1),
+th:nth-child(2),
+th:nth-child(3),
+th:nth-child(6) {
+  width: 10%;
+}
 
+
+/* Column size for tbody */
+td:nth-child(4),
+td:nth-child(5) {
+  width: 30%;
+}
+
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(6) {
+  width: 10%;
+}
+
+/*every odd row has a secondary background color */
 tbody tr:nth-child(odd) {
   background-color: #fff0c7;
+}
+
+@media all and (max-width: 680px) {
+  textarea {
+    width:100%
+  }
 }
